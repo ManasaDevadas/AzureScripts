@@ -1,4 +1,7 @@
-# Azure VM & Disk Right‑Sizing (IOPS‑aware)
+
+# Repository for Azure Scripts
+
+## SuggestSku - Azure VM & Disk Right‑Sizing (IOPS‑aware)
 
 This utility analyzes Azure VMs and their managed disks to help you **right‑size** compute and storage based on **IOPS utilization**. It:
 
