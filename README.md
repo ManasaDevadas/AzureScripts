@@ -1,6 +1,28 @@
 
 # Repository for Azure Scripts
 
+# AKS Node vCPU Report - aks_vCPU.ps1
+
+PowerShell script to list all VMSS across Azure subscriptions with vCPU counts, linked to their AKS clusters.
+
+## Output
+
+| Column | Description |
+|--------|-------------|
+| Subscription | Azure subscription name |
+| AKSCluster | AKS cluster name (or `-` if not AKS-managed) |
+| NodePool | VMSS name |
+| Location | Azure region |
+| VMSize | VM SKU (e.g., Standard_D4s_v5) |
+| Instances | Number of nodes |
+| vCPUsPerNode | vCPUs per instance |
+| TotalvCPUs | Instances × vCPUsPerNode |
+
+## Prerequisites
+
+- **Azure CLI** (`az`) - for AKS cluster lookup
+- **Az.Compute module** - for VMSS and SKU queries
+
 ## SuggestSku - Azure VM & Disk Right‑Sizing (IOPS‑aware)
 
 This utility analyzes Azure VMs and their managed disks to help you **right‑size** compute and storage based on **IOPS utilization**. It:
